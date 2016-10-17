@@ -1,0 +1,26 @@
+{
+  "name": "mongio",
+  "version": "1.0.0",
+  "description": "Utility to backup and restore mongoDB databases",
+  "main": "src/index",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/swanest/mongio.git"
+  },
+  "keywords": [
+    "mongoDB",
+    "backup",
+    "restore"
+  ],
+  "author": "Swanest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swanest/mongio/issues"
+  },
+  "homepage": "https://github.com/swanest/mongio#readme",
+  "dependencies": {
+  }
+}

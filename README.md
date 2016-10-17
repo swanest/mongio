@@ -1,2 +1,3 @@
 # mongio
-Backup &amp; restore mongodb
+
+Simple-to-use mongodb backup/restorer utility
