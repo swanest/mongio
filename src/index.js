@@ -4,7 +4,10 @@ const {exec, execSync} = require('child_process');
 function objToOpts(args) {
     let cmd = "", keys = Object.keys(args);
     keys.forEach(function (k) {
-        cmd += ` -${k} ${args[k]}`;
+        let sp = " ";
+        if (args[k][0] == "=")
+            sp = "";
+        cmd += ` --${k}${sp}${args[k]}`;
     });
     return cmd;
 };
