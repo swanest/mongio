@@ -1,5 +1,13 @@
-const cmdName = process.platform === 'linux' ? ['mongorestore-linux', 'mongodump-linux'] : ['mongorestore', 'mongodump'];
-const {exec, execSync} = require('child_process');
+const fs = require("fs"),
+    {exec, execSync} = require('child_process');
+let cmdName = ['mongorestore', 'mongodump'];
+if (process.platform === 'linux') {
+    if (fs.existsSync("/etc/alpine-release"))
+        cmdName = ['mongorestore-linux-alpine', 'mongodump-linux-alpine'];
+    else
+        cmdName = ['mongorestore-linux', 'mongodump-linux'];
+}
+
 
 function objToOpts(args) {
     let cmd = "", keys = Object.keys(args);
