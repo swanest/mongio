@@ -13,7 +13,7 @@ function objToOpts(args) {
     let cmd = "", keys = Object.keys(args);
     keys.forEach(function (k) {
         let sp = " ";
-        if (args[k][0] == "=")
+        if (args[k] == "" || args[k][0] == "=")
             sp = "";
         cmd += ` --${k}${sp}${args[k]}`;
     });

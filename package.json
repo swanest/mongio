@@ -1,6 +1,6 @@
 {
   "name": "@youri/mongio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility to backup and restore mongoDB databases",
   "main": "src/index",
   "scripts": {
