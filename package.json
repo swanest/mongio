@@ -1,6 +1,6 @@
 {
-  "name": "mongio",
-  "version": "1.0.2",
+  "name": "sw-mongio",
+  "version": "1.0.0",
   "description": "Utility to backup and restore mongoDB databases",
   "main": "src/index",
   "scripts": {
