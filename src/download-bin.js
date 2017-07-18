@@ -33,9 +33,15 @@ if (process.platform === 'linux') {
         .then(function (hash) {
             if (pkg.checksums[binaryName + PLATFORM] === hash) {
                 console.log('Checksum OK (%s): %s', binaryName, hash);
+                fs.chmodSync(__dirname + '/' + binaryName, '755');
             } else {
-                console.log('Checksum ERROR %s (%s) != %s (%s)', hash, binaryName, pkg.checksums[binaryName + PLATFORM], binaryName + PLATFORM);
+                console.error('Checksum ERROR %s (%s) != %s (%s)', hash, binaryName, pkg.checksums[binaryName + PLATFORM], binaryName + PLATFORM);
+                process.exit(1);
             }
+        })
+        .catch(function (e) {
+            console.error(e);
+            process.exit(1);
         });
 });
 
