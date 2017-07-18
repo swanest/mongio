@@ -1,10 +1,11 @@
 {
   "name": "sw-mongio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Utility to backup and restore mongoDB databases",
   "main": "src/index",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "install": "node src/download-bin.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +17,21 @@
     "restore"
   ],
   "author": "Swanest",
+  "checksums": {
+    "mongodump": "3ab5f93d0dd32e7de04991bdd3f7dee6",
+    "mongorestore": "e8e651076a0386918344fdaeae3aad30",
+    "mongodump-linux": "2a639ef0280dd67711d3ee1dc81aed90",
+    "mongorestore-linux": "9d258c2e52b2f17c370b23f35e2cd539",
+    "mongodump-linux-alpine": "7e94406a3658b98487ab2f5868fe8cf9",
+    "mongorestore-linux-alpine": "b0d55f182785e542db24ebbc7f07444d"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/swanest/mongio/issues"
   },
+  "files": [
+    "src"
+  ],
   "homepage": "https://github.com/swanest/mongio#readme",
   "dependencies": {
   }

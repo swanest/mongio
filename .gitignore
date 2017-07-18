@@ -27,6 +27,8 @@ build/Release
 # Dependency directory
 node_modules
 
+src/mongo*
+
 # Optional npm cache directory
 .npm
 
